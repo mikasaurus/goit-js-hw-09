@@ -51,6 +51,12 @@ const addLeadingZero = value => {
     valueField[1].innerHTML = `${value.hours}`.padStart(2, '0');
     valueField[2].innerHTML = `${value.minutes}`.padStart(2, '0');
     valueField[3].innerHTML = `${value.seconds}`.padStart(2, '0');
+    if (ms < 0) {
+      valueField[0].innerHTML = '00';
+      valueField[1].innerHTML = '00';
+      valueField[2].innerHTML = '00';
+      valueField[3].innerHTML = '00';
+    }
   }, 1000);
 };
 
